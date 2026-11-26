@@ -8,11 +8,11 @@ def vetor():
     input(f"Introduza {n} valores entre {min} e {max} para formar a matriz: ")
     for i in range(n):
         while True:
-            texto = input(f"  Valor {i + 1}/{n}: ").strip()
+            texto = input(f"Valor {i + 1}/{n}: ").strip()
             try:
                 valor = int(texto)
             except ValueError:
-                print("  Entrada inválida: introduza um número inteiro.")
+                print("Entrada inválida: introduza um número inteiro.")
                 continue
             if valor < min or valor > max:
                 print(f"Valor fora do intervalo [{min}, {max}].")
@@ -20,11 +20,13 @@ def vetor():
             vetor.append(valor)
             break
     return vetor
- 
+
+
+
 def quatro_vetor(vetor):
     resultado = []
     for valor in range(len(vetor)):
-        if valor %2 ==0:
+        if valor % 2 ==0:
             resultado.append(vetor[valor] * vetor[valor])
         else:
             resultado.append(vetor[valor])
@@ -40,13 +42,28 @@ def media_acima_da_media(vetor):
     return 100 * acima / len(vetor),m  
 
 def ordenar_metade(vetor):
-    n=len(vetor)
-    meio = n // 2
+    len(vetor)
+    meio = len(vetor) // 2
     primeira_metade = sorted(vetor[:meio])
     segunda_metade = sorted(vetor[n-meio:], Reverse = True)
     if n % 2 == 1:
         centro = [vetor[meio]]
     else:
         centro = []
-
     return primeira_metade + centro + segunda_metade
+
+def calculo_soma_media_d():
+    d = int(input("Digite um número D: (vai dividir o vetor)"))
+    soma = []
+    for num in soma:
+        if num % d == 0:
+            soma.append(num)
+    if len(soma) == 0:
+        print(f"Nenhum número é dívisivel por {d}")
+    else:
+        media = sum(soma)/len(soma)
+        print(f"A soma por {d} do vetor escolhido é = {soma}")
+        print(f"A média por {d} do vetor escolhido é = {media}")
+
+def alugma_coisa_que_não_entendi():
+    print("Bom dia")

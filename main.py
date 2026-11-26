@@ -1,1 +1,4 @@
-print("Hello world!")
+from src.vetor import vetor
+
+
+vetor()
